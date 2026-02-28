@@ -1,0 +1,93 @@
+﻿body {
+    background: url('../img/white-wall-3-bg.png'), linear-gradient(135deg, #e8f1ff, #f9fbff);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formlogin {
+    flex-basis: 40%;
+}
+.login-text-logo {
+    width: 40%;
+    min-width: 160px;
+    transition: transform 0.25s ease;
+}
+
+    /* เอฟเฟกต์เด้งเบาๆ ตอน hover */
+    .login-text-logo:hover {
+        transform: translateY(-5px);
+    }
+
+    /* หรือถ้าอยากให้สั่นเบาๆ แทน */
+    .login-text-logo:hover {
+        animation: shake 0.3s ease-in-out;
+    }
+
+.login-card {
+    width: 100%;
+    max-width: 60%;
+    min-height: 480px;
+    /*max-height:640px;*/
+    height: 70vh;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+/* ฝั่งซ้าย: เปลี่ยนจาก background เป็นโลโก้ตรงกลาง */
+.login-image {
+    background: linear-gradient(135deg, #4e73df, #224abe);
+    
+    align-items: center;
+    justify-content: center;
+}
+
+    /* โลโก้ขนาดและเอฟเฟกต์ hover */
+    .login-image img {
+        
+        transition: all 0.3s ease;
+    }
+
+        /* effect สั่นเบา ๆ ตอน hover */
+        .login-image img:hover {
+            transform: translateY(-5px) rotate(-1deg);
+            animation: shake 0.3s ease-in-out;
+        }
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+
+    25% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+
+    50% {
+        transform: translateY(-6px) rotate(-2deg);
+    }
+
+    75% {
+        transform: translateY(-4px) rotate(2deg);
+    }
+}
+
+/* จอเล็ก: ซ่อนฝั่งซ้าย */
+@media (max-width: 1068px) {
+   
+
+    .login-card {
+        height: auto;
+        min-height: unset;
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1300px){
+    .login-image ,.formlogin {
+        flex-basis: 50%;
+    }
+}
